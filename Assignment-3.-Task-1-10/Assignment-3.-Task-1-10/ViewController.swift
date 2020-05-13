@@ -60,11 +60,18 @@ class ViewController: UIViewController {
 //-----
         
 // Task 8. Write a method that will translate the string into transliteration.
-                               
-        print("Task 7")
+        print("Task 8")
         transliterationMethod (char: "Зимняя рыбалка удалась на славу! Язь")
         print("______")
 //-----
+        
+// Task 9. Make a selection from an array of strings containing the specified string.
+        print("Task 9")
+        selectionFromArray(arr:["Vada","Sevan","Aklazhan"],specStr: "va")
+        print("______")
+//-----
+
+      
         
         
         
@@ -223,5 +230,15 @@ class ViewController: UIViewController {
     }
             
     //-----
+    
+// Task 9. Make a selection from an array of strings containing the specified string
+                            
+    func selectionFromArray(arr:[String],specStr:String) {
+        print(arr.filter { (i) -> Bool in
+            i.lowercased().contains(specStr.lowercased())
+        })
+    }
+//-----
+    
     
 }
