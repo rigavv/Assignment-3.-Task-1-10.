@@ -70,6 +70,13 @@ class ViewController: UIViewController {
         selectionFromArray(arr:["Vada","Sevan","Aklazhan"],specStr: "va")
         print("______")
 //-----
+       
+// Task 10. Set <String> - antimat [“fuck”, “fak”] “hello my fak” “hello my ***” use Set or NSSet for antimat - exclude from the sentence all words contained in the set
+
+                print("Task 10")
+                excludeFromTheSentence(char: "Hey! Motherfucker what the fuck do you think you're doing? ")
+                print("______")
+//-----
 
       
         
@@ -239,6 +246,25 @@ class ViewController: UIViewController {
         })
     }
 //-----
-    
+
+    // Task 10. Set <String> - antimat [“fuck”, “fak”] “hello my fak” “hello my ***” use Set or NSSet for antimat - exclude from the sentence all words contained in the set
+
+
+    func excludeFromTheSentence(char: String) {
+        print(char)
+        let setSwearWords : Set<String> = ["fuck","Motherfucker","Son of a bitch","Poop","Asshole"]
+        var arrChar = char.components(separatedBy: " ") // как задать несколько сепараторов?
+        for x in arrChar {
+            for y in setSwearWords {
+                if x == y {
+                    arrChar[arrChar.firstIndex(of: x)!] = "***"
+                }
+            }
+        }
+        let freeSwearStr = arrChar.joined(separator: " ")
+        print ("Без матов - \(freeSwearStr)")
+    }
+                   
+    //-----
     
 }
