@@ -47,6 +47,12 @@ class ViewController: UIViewController {
         print("______")
 //-----
         
+// Task 6. Check the password for reliability from 1 to 5
+                print("Task 6")
+                passwordReliability (pass: "Pa$$w0rD")
+                print("______")
+//-----
+        
         
         
     } // End viewDidLoad
@@ -115,8 +121,21 @@ class ViewController: UIViewController {
         print(String(temp.reversed()))
     }
 //-----
-    
+
+// Task 6. Check the password for reliability from 1 to 5
+                
+    func passwordReliability (pass: String) {
+        var score = 0
+        if pass.rangeOfCharacter(from: .decimalDigits) != nil { score += 1 }
+        if pass.rangeOfCharacter(from: .lowercaseLetters) != nil { score += 1}
+        if pass.rangeOfCharacter(from: .uppercaseLetters) != nil { score += 1}
+        if pass.rangeOfCharacter(from: .symbols) != nil { score += 1}
+        if score == 4 { score = 5}
+        print("Надежность пароля по шкале от 1 до 5 =",score)
+    }
+//-----
     
 
 }
+
 
