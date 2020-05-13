@@ -53,6 +53,12 @@ class ViewController: UIViewController {
                 print("______")
 //-----
         
+// Task 7. Sorting an array by a non-built-in method in ascending order + delete duplicates [9, 1, 2, 5, 1, 7]
+                        print("Task 7")
+                        deleteDuplicates (arr: [9, 1, 2, 5, 1, 7])
+                        print("______")
+//-----
+        
         
         
     } // End viewDidLoad
@@ -134,8 +140,26 @@ class ViewController: UIViewController {
         print("Надежность пароля по шкале от 1 до 5 =",score)
     }
 //-----
-    
+
+// Task 7. Sorting an array by a non-built-in method in ascending order + delete duplicates [9, 1, 2, 5, 1, 7]
+                          
+    func deleteDuplicates (arr: [Int]){
+        print(arr)
+        var arr = Array(arr)
+        for start in 0..<arr.count {
+            for end in 0..<(arr.count - 1) {
+                if (arr[start] < arr[end]) {
+                    let cloud = arr[start]
+                    arr[start] = arr[end]
+                    arr[end] = cloud
+                }
+            }
+        }
+       print("Сортировка по возрастанию = \(arr)")
+       print("Убираем дубликаты")
+       print(arr.enumerated().filter{ arr.firstIndex(of: $0.1) == $0.0 }.map{ $0.1 })
+    }
+                     
+//-----
 
 }
-
-
