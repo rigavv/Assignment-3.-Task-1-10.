@@ -48,15 +48,22 @@ class ViewController: UIViewController {
 //-----
         
 // Task 6. Check the password for reliability from 1 to 5
-                print("Task 6")
-                passwordReliability (pass: "Pa$$w0rD")
-                print("______")
+        print("Task 6")
+        passwordReliability (pass: "Pa$$w0rD")
+        print("______")
 //-----
         
 // Task 7. Sorting an array by a non-built-in method in ascending order + delete duplicates [9, 1, 2, 5, 1, 7]
-                        print("Task 7")
-                        deleteDuplicates (arr: [9, 1, 2, 5, 1, 7])
-                        print("______")
+        print("Task 7")
+        deleteDuplicates (arr: [9, 1, 2, 5, 1, 7])
+        print("______")
+//-----
+        
+// Task 8. Write a method that will translate the string into transliteration.
+                               
+        print("Task 7")
+        transliterationMethod (char: "Зимняя рыбалка удалась на славу! Язь")
+        print("______")
 //-----
         
         
@@ -162,4 +169,59 @@ class ViewController: UIViewController {
                      
 //-----
 
+    // Task 8. Write a method that will translate the string into transliteration.
+    
+    func transliterationMethod (char: String) {
+        let dictionary = [
+            "а" : "a",
+            "б" : "b",
+            "в" : "v",
+            "г" : "g",
+            "д" : "d",
+            "е" : "e",
+            "ё" : "yo",
+            "ж" : "zh",
+            "з" : "z",
+            "З" : "Z",
+            "и" : "i",
+            "й" : "j",
+            "к" : "k",
+            "л" : "l",
+            "м" : "m",
+            "н" : "n",
+            "о" : "o",
+            "п" : "p",
+            "р" : "r",
+            "с" : "s",
+            "т" : "t",
+            "у" : "u",
+            "ф" : "f",
+            "х" : "h",
+            "ц" : "c",
+            "ч" : "ch",
+            "ш" : "sh",
+            "щ" : "shh",
+            "ъ" : "`",
+            "ы" : "y",
+            "ь" : "`",
+            "э" : "ea",
+            "ю" : "ju",
+            "я" : "ya",
+            "Я" : "YA",
+            "!" : "!",
+            " " : " "
+        ]
+        var temp = ""
+        for i in char {
+            for key in dictionary.keys {
+                if String(i) == String(key) {
+                    temp += dictionary[String(i)] ?? ""
+                }
+            }
+        }
+        print(temp)
+    }
+            
+    //-----
+    
 }
