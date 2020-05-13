@@ -30,18 +30,21 @@ class ViewController: UIViewController {
         
 // Task 3. Create a line where your First Name Last Name “IvanVasilevich". You need to split into two separate lines from the previous one to create a third, where they will both be separated by a space
         print("Task 3")
-        
         separateFullName(fullName: "ViktorValerievich")
-        
         print("______")
 //-----
 
 // Task 4. Output the string in a mirror. Axis → bcO without using reverse (character by character)
-                print("Task 4")
-                
-                stringMirror (char: "Ось")
-                
-                print("______")
+        print("Task 4")
+        stringMirror (char: "Ось")
+        print("______")
+//-----
+        
+// Task 5. Add commas to the line as the calculator places them.
+        print("Task 5")
+//        addCommas (numberString: "1234567")
+        addCommas (numberString: "12345")
+        print("______")
 //-----
         
         
@@ -98,7 +101,22 @@ class ViewController: UIViewController {
         print(mirrorString)
     }
 //-----
-
+    
+// Task 5. Add commas to the line as the calculator places them.
+            
+    func addCommas (numberString: String) {
+        var temp = ""
+        for (index, char) in numberString.reversed().enumerated() {
+            if index != 0 && index % 3 == 0 {
+                temp.append(",")
+            }
+            temp.append(String(char))
+        }
+        print(String(temp.reversed()))
+    }
+//-----
+    
+    
 
 }
 
