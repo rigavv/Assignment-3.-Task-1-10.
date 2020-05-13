@@ -35,7 +35,14 @@ class ViewController: UIViewController {
         
         print("______")
 //-----
-        
+
+// Task 4. Output the string in a mirror. Axis → bcO without using reverse (character by character)
+                print("Task 4")
+                
+                stringMirror (char: "Ось")
+                
+                print("______")
+//-----
         
         
         
@@ -81,7 +88,16 @@ class ViewController: UIViewController {
     
 //-----
     
-    
+// Task 4. Output the string in a mirror. Axis → bcO without using reverse (character by character).
+    func stringMirror(char: String){
+        print(char)
+        var mirrorString = ""
+        for i in char {
+            mirrorString = String(i) + mirrorString
+        }
+        print(mirrorString)
+    }
+//-----
 
 
 }
