@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         
 // Task 3. Create a line where your First Name Last Name “IvanVasilevich". You need to split into two separate lines from the previous one to create a third, where they will both be separated by a space
         print("Task 3")
-        separateFullName(fullName: "ViktorValerievich")
+        separateFullName(fullName: "ViktorNikolaevich")
         print("______")
 //-----
 
@@ -112,15 +112,20 @@ class ViewController: UIViewController {
         var surname = ""
         var result = ""
         for i in fullName.reversed() {
-            if i.isUppercase, let index = fullName.firstIndex(of: i)  {
-                surname = String(fullName.suffix(from: index))
-                name = String(fullName.prefix(upTo: index))
+            if i.isUppercase, let indx = fullName.firstIndex(of: i)  {
+                print(i.isUppercase)
+                print(i)
+                surname = String(fullName.suffix(from: indx))
+                name = String(fullName.prefix(upTo: indx))
                 result = name + " " + surname
                 break
             }
         }
-        print("Имя-",name,"Фамилия-",surname,"Имя с фамилией-", result)
+        print("Имя-",name)
+        print("Фамилия-",surname)
+        print("Имя с фамилией-", result)
     }
+    // If the middle name and first name begin with the same letter, the algorithm does not work ...
     
 //-----
     
