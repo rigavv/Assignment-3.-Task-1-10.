@@ -17,14 +17,14 @@ class ViewController: UIViewController {
         
 // Task 1. Create a string with your name, print the number of characters contained in it.
         print("Task 1")
-        printNameNumber (name: "Viktor")
+        printNameNumber(name: "Viktor")
         print("______")
 // -----
         
 // Task 2. Create a line with your middle name and check it for the end of “ich / on”
         print("Task 2")
 //        checkMiddleName (middleName: "Валериевич")
-        checkMiddleName (middleName: "Валериевна")
+        checkMiddleName(middleName: "Валериевна")
         print("______")
 //-----
         
@@ -36,20 +36,20 @@ class ViewController: UIViewController {
 
 // Task 4. Output the string in a mirror. Axis → bcO without using reverse (character by character)
         print("Task 4")
-        stringMirror (char: "Ось")
+        stringMirror(char: "Ось")
         print("______")
 //-----
         
 // Task 5. Add commas to the line as the calculator places them.
         print("Task 5")
 //        addCommas (numberString: "1234567")
-        addCommas (numberString: "12345")
+        addCommas(numberString: "12345")
         print("______")
 //-----
         
 // Task 6. Check the password for reliability from 1 to 5
         print("Task 6")
-        passwordReliability (pass: "Pa$$w0rD")
+        passwordReliability(pass: "Pa$$w0rD")
         print("______")
 //-----
         
@@ -61,7 +61,7 @@ class ViewController: UIViewController {
         
 // Task 8. Write a method that will translate the string into transliteration.
         print("Task 8")
-        transliterationMethod (char: "Зимняя рыбалка удалась на славу! Язь")
+        transliterationMethod(char: "Зимняя рыбалка удалась на славу! Язь")
         print("______")
 //-----
         
@@ -73,9 +73,9 @@ class ViewController: UIViewController {
        
 // Task 10. Set <String> - antimat [“fuck”, “fak”] “hello my fak” “hello my ***” use Set or NSSet for antimat - exclude from the sentence all words contained in the set
 
-                print("Task 10")
-                excludeFromTheSentence(char: "Hey! Motherfucker what the fuck do you think you're doing? ")
-                print("______")
+        print("Task 10")
+        excludeFromTheSentence(char: "Hey! Motherfucker what the fuck do you think you're doing? ")
+        print("______")
 //-----
 
       
@@ -142,7 +142,7 @@ class ViewController: UIViewController {
     
 // Task 5. Add commas to the line as the calculator places them.
             
-    func addCommas (numberString: String) {
+    func addCommas(numberString: String) {
         var temp = ""
         for (index, char) in numberString.reversed().enumerated() {
             if index != 0 && index % 3 == 0 {
@@ -156,7 +156,7 @@ class ViewController: UIViewController {
 
 // Task 6. Check the password for reliability from 1 to 5
                 
-    func passwordReliability (pass: String) {
+    func passwordReliability(pass: String) {
         var score = 0
         if pass.rangeOfCharacter(from: .decimalDigits) != nil { score += 1 }
         if pass.rangeOfCharacter(from: .lowercaseLetters) != nil { score += 1}
@@ -169,7 +169,7 @@ class ViewController: UIViewController {
 
 // Task 7. Sorting an array by a non-built-in method in ascending order + delete duplicates [9, 1, 2, 5, 1, 7]
                           
-    func deleteDuplicates (arr: [Int]){
+    func deleteDuplicates(arr: [Int]){
         print(arr)
         var arr = Array(arr)
         for start in 0..<arr.count {
@@ -190,7 +190,7 @@ class ViewController: UIViewController {
 
     // Task 8. Write a method that will translate the string into transliteration.
     
-    func transliterationMethod (char: String) {
+    func transliterationMethod(char: String) {
         let dictionary = [
             "а" : "a",
             "б" : "b",
