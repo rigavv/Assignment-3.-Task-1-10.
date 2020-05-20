@@ -87,14 +87,14 @@ class ViewController: UIViewController {
 
 // Task 1. Create a string with your name, print the number of characters contained in it.
 
-    func printNameNumber (name:String) {
+    func printNameNumber(name:String) {
         print(name.count)
     }
 // -----
     
 // Task 2. Create a line with your middle name and check it for the end of “ich / on”
             
-    func checkMiddleName (middleName:String) {
+    func checkMiddleName(middleName:String) {
         let theEnd = middleName.suffix(2)
         print(theEnd)
         if middleName.hasSuffix("ич") || middleName.hasSuffix("на") {
@@ -106,7 +106,7 @@ class ViewController: UIViewController {
     
 // Task 3. Create a line where your First Name Last Name “IvanVasilevich". You need to split into two separate lines from the previous one to create a third, where they will both be separated by a space
                     
-    func separateFullName (fullName: String) {
+    func separateFullName(fullName: String) {
         print(fullName)
         var name = ""
         var surname = ""
