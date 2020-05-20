@@ -24,7 +24,7 @@ class ViewController: UIViewController {
 // Task 2. Create a line with your middle name and check it for the end of “ich / on”
         print("Task 2")
 //        checkMiddleName (middleName: "Валериевич")
-        checkMiddleName(middleName: "Валериевна")
+        checkMiddleName(middleName: "Валериев")
         print("______")
 //-----
         
@@ -77,10 +77,6 @@ class ViewController: UIViewController {
         excludeFromTheSentence(char: "Hey! Motherfucker what the fuck do you think you're doing? ")
         print("______")
 //-----
-
-      
-        
-        
         
     } // End viewDidLoad
 
@@ -99,6 +95,9 @@ class ViewController: UIViewController {
         print(theEnd)
         if middleName.hasSuffix("ич") || middleName.hasSuffix("на") {
             print("В отчестве \(middleName), присутствует окончание -  \(theEnd)")
+        }
+        else {
+            print("В отчестве \(middleName),  отсутствует окончание")
         }
     }
             
